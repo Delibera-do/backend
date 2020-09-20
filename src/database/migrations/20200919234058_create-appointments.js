@@ -8,7 +8,6 @@ exports.up = function(knex) {
     table.datetime('date', { precision: 6 }).defaultTo(knex.fn.now());
     table.string('local').notNullable(); 
     table.string('owner_phone').notNullable(); 
-    table.foreign('owner_phone').references('phone').inTable('user');
 });
 }
 
