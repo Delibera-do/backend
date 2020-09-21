@@ -19,6 +19,12 @@ module.exports = {
         const users = await connection('user').select('*');
         return res.json(users);
     },
+
+    async show(req, res) {
+        const { phone } = req.params;
+        const users = await connection('user').select('*').where('phone', phone);
+        return res.json(users);
+    },
     
     async delete(req, res) {
         const { phone } = req.params;

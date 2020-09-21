@@ -10,11 +10,11 @@ module.exports = {
 
         const formData = {
           from: "ahead-charger",
-          to:"5541995661124",
+          to:`${phone}`,
           contents:[{"type":"text","text": `Olá a sua senha de acesso é: ${id}`}]
         }
 
-        requestAPI.post({
+         requestAPI.post({
           headers: {
             'Content-Type': 'application/json',
             'X-API-TOKEN':'iDlYjUYJ02xJ7yoxrjIAFd5yn0WzaDpTFRpt'

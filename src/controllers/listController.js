@@ -1,12 +1,11 @@
 const connection = require('../database/connection');
 
-
 module.exports = {
     async store(req, res) {
         const { phone, id } = req.body;
         const user = await connection('list').insert({
-            phone
-          , id
+            number_phone:phone
+          , number_appointment:id
             });
             return res.json(user);
     },
